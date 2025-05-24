@@ -79,8 +79,13 @@ MAIL_FROM_NAME="${APP_NAME}"
 
    > Generated invoices will be stored in `storage/app/public/invoices/`.
 
+8. **Run scheduler (for running cancel orders command)**
+   ```bash
+   php artisan schedule:work
+   ```
 
-8. **Serve the application**
+
+9. **Serve the application**
    ```bash
    php artisan serve
    ```
