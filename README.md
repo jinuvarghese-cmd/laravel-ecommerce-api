@@ -66,11 +66,20 @@ MAIL_FROM_NAME="${APP_NAME}"
    ```bash
    php artisan migrate
    ```
+   
+6. **Run queue worker (for invoice generation & email jobs)**
+   ```bash
+   php artisan queue:listen
+   ```
 
-6. **Serve the application**
+   > Generated invoices will be stored in `storage/app/public/invoices/`.
+
+
+7. **Serve the application**
    ```bash
    php artisan serve
    ```
+   
 
 ---
 
