@@ -27,7 +27,7 @@ A RESTful eCommerce backend built with Laravel. This project supports user and a
 1. **Clone the repository**
    ```bash
    git clone https://github.com/jinuvarghese-cmd/laravel-ecommerce-api.git
-   cd ecommerce-api
+   cd laravel-ecommerce-api
    ```
 
 2. **Install dependencies**
@@ -62,12 +62,17 @@ MAIL_FROM_ADDRESS=example@example.com
 MAIL_FROM_NAME="${APP_NAME}"
  ```
 
-5. **Run migrations**
+5. **Clear Cache**
+   ```bash
+   php artisan optimize
+   ```
+
+6. **Run migrations**
    ```bash
    php artisan migrate
    ```
    
-6. **Run queue worker (for invoice generation & email jobs)**
+7. **Run queue worker (for invoice generation & email jobs)**
    ```bash
    php artisan queue:listen
    ```
@@ -75,7 +80,7 @@ MAIL_FROM_NAME="${APP_NAME}"
    > Generated invoices will be stored in `storage/app/public/invoices/`.
 
 
-7. **Serve the application**
+8. **Serve the application**
    ```bash
    php artisan serve
    ```
