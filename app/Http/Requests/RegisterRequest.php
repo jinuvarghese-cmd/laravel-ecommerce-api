@@ -18,6 +18,10 @@ class RegisterRequest extends FormRequest
                 'description' => 'User\'s email address.',
                 'example' => 'john@example.com',
             ],
+            'role' => [
+                'description' => "User role, optional. Must be either 'user' or 'admin'. Defaults to 'user' if not provided.",
+                'example' => 'user',
+            ],
             'password' => [
                 'description' => 'Account password.',
                 'example' => 'password123',
@@ -48,6 +52,7 @@ class RegisterRequest extends FormRequest
         return [
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email',
+            'role' => 'nullable|in:user,admin',
             'password' => 'required|string|confirmed',
         ];
     }
