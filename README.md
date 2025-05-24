@@ -27,7 +27,7 @@ A RESTful eCommerce backend built with Laravel. This project supports user and a
 1. **Clone the repository**
    ```bash
    git clone https://github.com/jinuvarghese-cmd/laravel-ecommerce-api.git
-   cd ecommerce-api
+   cd laravel-ecommerce-api
    ```
 
 2. **Install dependencies**
