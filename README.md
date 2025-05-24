@@ -78,9 +78,25 @@ MAIL_FROM_NAME="${APP_NAME}"
    ```
 
    > Generated invoices will be stored in `storage/app/public/invoices/`.
+   > make sure to run the following command to create a symbolic link for storage:
+
+   ```bash
+   php artisan storage:link
+   ```
+   > You can then access invoices from the browser at:
+
+   ```bash
+   http://localhost/storage/invoices/{invoice_filename}.pdf
+   ```
 
 
-8. **Serve the application**
+8. **Run scheduler (for running cancel orders command)**
+   ```bash
+   php artisan schedule:work
+   ```
+
+
+9. **Serve the application**
    ```bash
    php artisan serve
    ```
@@ -136,7 +152,7 @@ To regenerate docs:
 php artisan scribe:generate
 ```
 
-Open `/docs/` in your browser to view the API docs.
+Open `http://localhost/docs/` in your browser to view the API docs.
 
 ---
 
