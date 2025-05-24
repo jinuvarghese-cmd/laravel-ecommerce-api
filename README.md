@@ -152,7 +152,7 @@ To regenerate docs:
 php artisan scribe:generate
 ```
 
-Open `/docs/` in your browser to view the API docs.
+Open `http://localhost/docs/` in your browser to view the API docs.
 
 ---
 
