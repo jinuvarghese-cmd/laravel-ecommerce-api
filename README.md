@@ -26,7 +26,7 @@ A RESTful eCommerce backend built with Laravel. This project supports user and a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ecommerce-api.git
+   git clone https://github.com/jinuvarghese-cmd/laravel-ecommerce-api.git
    cd ecommerce-api
    ```
 
@@ -40,6 +40,7 @@ A RESTful eCommerce backend built with Laravel. This project supports user and a
    cp .env.example .env
    php artisan key:generate
    ```
+   
 
 4. **Update `.env` with your DB details**
    ```env
@@ -48,9 +49,22 @@ A RESTful eCommerce backend built with Laravel. This project supports user and a
    DB_PASSWORD=yourpassword
    ```
 
-5. **Run migrations and seeders**
+   > **Note:** To enable email features (like order confirmation or password reset), configure your `.env` with [Mailtrap](https://mailtrap.io/) or any SMTP service:
+
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=your_mailtrap_username
+MAIL_PASSWORD=your_mailtrap_password
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=example@example.com
+MAIL_FROM_NAME="${APP_NAME}"
+ ```
+
+5. **Run migrations**
    ```bash
-   php artisan migrate --seed
+   php artisan migrate
    ```
 
 6. **Serve the application**
@@ -72,6 +86,8 @@ A RESTful eCommerce backend built with Laravel. This project supports user and a
 ### Products
 
 - `GET /api/products` – List all products
+- `PUT /api/products/{id}` – update product details
+- `DELETE /api/products/{id}` – delete product
 
 ### Orders
 
@@ -101,7 +117,7 @@ To regenerate docs:
 php artisan scribe:generate
 ```
 
-Open `public/docs/index.html` in your browser to view the API docs.
+Open `/docs/` in your browser to view the API docs.
 
 ---
 
