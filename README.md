@@ -86,6 +86,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 ### Products
 
 - `GET /api/products` – List all products
+- `POST /api/products` – Create a Product
 - `PUT /api/products/{id}` – update product details
 - `DELETE /api/products/{id}` – delete product
 
@@ -94,6 +95,10 @@ MAIL_FROM_NAME="${APP_NAME}"
 - `POST /api/orders` – Place a new order
 - `GET /api/orders` – Get user's orders
 - `GET /api/admin/orders` – Get all orders (admin only)
+
+### Webhooks
+
+- `POST /api/webhooks/payment` – Handle payment gateway callbacks
 
 ---
 
